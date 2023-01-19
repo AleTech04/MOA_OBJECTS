@@ -2,19 +2,19 @@ namespace moa.object;
 
 using {cuid, managed} from '@sap/cds/common';
 
-entity ObjectAttribute: cuid {
-    attribute: Association to ObjectType;
-    attribute_desc: String;
-    ControlType: Association to ControlTypes
-}
-
-entity ObjectType: cuid {
+entity objectType: cuid {
     objType: String(3);
     description: String;
-    attribute: Association to many ObjectAttribute;
+    attribute: Association to many objectAttribute on attribute.attribute = $self;
 }
 
-entity ControlTypes {
+entity objectAttribute: cuid {
+    attribute: Association to objectType;
+    attribute_desc: String;
+    ControlType: Association to controlTypes
+}
+
+entity controlTypes {
     key CtrlType: Integer;
     input: Boolean;
     inp_desc:String;

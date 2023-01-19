@@ -1,0 +1,17 @@
+###
+POST http://localhost:4004/catalog/ObjectAttribute
+Content-Type: application/json
+
+{"attribute": "IDC", "attribute_desc":"ID Company", "ControlType": 1}
+
+###
+POST http://localhost:4004/catalog/ObjectType
+Content-Type: application/json
+
+{"objType": "COM", "description":"Company", "attribute": "COM"}
+
+###
+POST http://localhost:4004/catalog/ControlTypes
+Content-Type: application/json
+
+{"CtrlType": 1, "input":true, "selection": false, "searchHelp":false}

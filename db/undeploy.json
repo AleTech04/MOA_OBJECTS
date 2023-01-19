@@ -1,5 +1,8 @@
 [
   "src/gen/**/*.hdbview",
   "src/gen/**/*.hdbindex",
-  "src/gen/**/*.hdbconstraint"
+  "src/gen/**/*.hdbconstraint",
+  "src/gen/moa.object.ObjectType.hdbtable",
+  "src/gen/moa.object.ControlTypes.hdbtable",
+  "src/gen/moa.object.ObjectAttribute.hdbtable"
 ]
