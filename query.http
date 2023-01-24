@@ -1,15 +1,23 @@
 ###
-POST http://localhost:4004/catalog/ObjectAttribute
+POST http://localhost:4004/catalog/AttributiOggetto
 Content-Type: application/json
 
-{"attribute": "IDC", "attribute_desc":"ID Company", "ControlType": 1}
+{"ID": 1, "attribute_desc":"ID Company"}
 
 ###
-POST http://localhost:4004/catalog/ObjectType
+POST http://localhost:4004/catalog/TipoOggetti
 Content-Type: application/json
 
-{"objType": "COM", "description":"Company", "attribute": "COM"}
+{"objType": "C02", "description":"Company", "attribute_ID":1}
 
+###
+GET http://localhost:4004/catalog/TipoOggetti?$expand=attribute
+Content-Type: application/json
+
+###
+DELETE   http://localhost:4004/catalog/ObjectType
+Content-Type: application/json
+{"objtype": "COM"}
 ###
 POST http://localhost:4004/catalog/ControlTypes
 Content-Type: application/json
